@@ -15,14 +15,12 @@
 
 <div id="columns">
   <div id="side">
+         <% if session[:cart_id] %>
+           <%= render @cart %>
+         <%end %>  	
         <ul>
          <li><a href="http://localhost:3000">Home</a></li>
          <li><%= link_to "Products", products_path %></li>
-         <li>
-         <% if session[:cart_id] %>
-           <%= link_to "My Cart", cart_path(session[:cart_id]) %>
-         <%end %>
-         </li>
          <li><a href="">Contact</a></li>
          </ul>
   </div>

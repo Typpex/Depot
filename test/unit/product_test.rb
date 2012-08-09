@@ -44,5 +44,6 @@ class ProductTest < ActiveSupport::TestCase
     assert !p.save
     assert p.errors[:title].any?
   end
+  
 
 end
