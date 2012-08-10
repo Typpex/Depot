@@ -15,9 +15,11 @@
 
 <div id="columns">
   <div id="side">
-         <% if session[:cart_id] %>
+  	<div id="cart">
+  		           </div>
+  		     <% if @cart %>      
            <%= render @cart %>
-         <%end %>  	
+           <% end %> 	
         <ul>
          <li><a href="http://localhost:3000">Home</a></li>
          <li><%= link_to "Products", products_path %></li>
